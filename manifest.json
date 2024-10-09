@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Upvote All",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/r/*/comments/*"],
+      "js": ["contentScripts/index.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
